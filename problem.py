@@ -2,7 +2,7 @@
 # Python Challenge
 
 # CLARIFICATION: Please keep in mind that we only have the time and
-# resources to invite candidates for the in person who send in a
+# resources to invite candidates for the in-person interview who send us a
 # solution that produces the correct answer to the largest test case,
 # the 1000x1000 grid, in 10 seconds or less.
 
