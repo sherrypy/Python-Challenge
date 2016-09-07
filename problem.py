@@ -9,7 +9,7 @@
 # CLARIFICATION 2: Please keep in mind that while the above is the only
 # "hard" requirement, we WILL be inspecting the actual written code in 
 # depth to ascertain that it is of the excellent quality a position 
-# on the Idea Evolver Engineering team requires.
+# on the Idea Evolver Engineering Team requires.
 
 # --------------------------------------
 
