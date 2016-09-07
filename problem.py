@@ -1,6 +1,15 @@
 
 # Python Challenge
 
+# CLARIFICATION:  Please keep in mind you will NOT pass the 
+# screening unless your solution can produce the correct answer
+# to the largest test case, the 1000x1000 grid, in 10 seconds
+# or less.
+
+# --------------------------------------
+
+# Problem Description:
+
 # You are given a matrix with m rows and n columns of cells, each of which
 # contains either 1 or 0. Two cells are said to be connected if they are
 # adjacent to each other horizontally, vertically, or diagonally. The connected
@@ -51,9 +60,16 @@
 # simplest and most common way to read and write to stdin/out
 
 # The test cases are located in the test-cases directory.
+# ALL OF THE TEST CASES EXCEPT FOR THE 1000x1000 are just
+# for you to test your solution on.  We will ONLY BE TESTING
+# YOUR SOLUTION WITH THE 1000x1000 grid, `hard-test-case1000x1000.txt`.
+# As stated at the top, we ONLY invite candidates who send us 
+# a solution that produces the correct answer to the 1000x1000 grid
+# in 10 seconds or less.
 
 # run-tests.py is not part of your challenge.  It is simply a convenience program
-# that will test your code against all the test cases, one after another, and
+# that will test your code against all the test cases (in the test-cases directory only, 
+# one after another, and
 # then tell you whether it passed or failed, and what the expected and actual
 # outputs are.  You may review and modify run-tests.py as much as you want, but
 # it will not score or lose you any points
@@ -64,11 +80,13 @@
 # they do not come with an expected output.  You may generate test
 # cases of various dimensions using generate-test-case.py, but the
 # ability of your algorithm to solve extra test cases you've created
-# will not be considered in our evaluation of this challenge.  Your
-# algorithm should be able to find a correct solution in a timely
-# manner up to the 1000x1000 grid.
+# will not be considered in our evaluation of this challenge.  THE
+# ONLY HARD REQUIREMENT is the 1000x1000 in less than 10s.
 
 # Finally, you may not use third party libraries to complete this challenge.  You
 # may only use the libraries available on a fresh Python 2.7 install.  I doubt
 # you will need to use any libraries at all as this is just an algorithmic
-# challenge.
+# challenge.  BUT YOU MAY USE ANYTHING FROM THE BUILT IN PYTHON STANDARD LIBRARY 
+# (e.g. functools, itertools, math, string, etc).  It is actually
+# very impressive to see someone who is very comfortable with the 
+# entire python ecosystem.
