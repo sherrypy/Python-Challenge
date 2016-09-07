@@ -6,6 +6,11 @@
 # solution that produces the correct answer to the largest test case,
 # the 1000x1000 grid, in 10 seconds or less.
 
+# CLARIFICATION 2: Please keep in mind that while the above is the only
+# "hard" requirement, we WILL be inspecting the actual written code in 
+# depth to ascertain that it is of the excellent quality a position 
+# on the Idea Evolver Engineering team requires.
+
 # --------------------------------------
 
 # Problem Description:
