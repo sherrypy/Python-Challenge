@@ -1,10 +1,10 @@
 
 # Python Challenge
 
-# CLARIFICATION:  Please keep in mind you will NOT pass the 
-# screening unless your solution can produce the correct answer
-# to the largest test case, the 1000x1000 grid, in 10 seconds
-# or less.
+# CLARIFICATION: Please keep in mind that we only have the time and
+# resources to invite candidates for the in person who send in a
+# solution that produces the correct answer to the largest test case,
+# the 1000x1000 grid, in 10 seconds or less.
 
 # --------------------------------------
 
@@ -67,12 +67,12 @@
 # a solution that produces the correct answer to the 1000x1000 grid
 # in 10 seconds or less.
 
-# run-tests.py is not part of your challenge.  It is simply a convenience program
-# that will test your code against all the test cases (in the test-cases directory only, 
-# one after another, and
-# then tell you whether it passed or failed, and what the expected and actual
-# outputs are.  You may review and modify run-tests.py as much as you want, but
-# it will not score or lose you any points
+# run-tests.py is not part of your challenge.  It is simply a
+# convenience program that will test your code against all the test
+# cases (in the test-cases directory only, one after another, and then
+# tell you whether it passed or failed, and what the expected and
+# actual outputs are.  You may review and modify run-tests.py as much
+# as you want, but it will not score or lose you any points
 
 # Included in the top level directory are four "hard" test cases that
 # are square grids of side lengths 10, 25, 50, 100, and 1000 cells.
@@ -83,10 +83,11 @@
 # will not be considered in our evaluation of this challenge.  THE
 # ONLY HARD REQUIREMENT is the 1000x1000 in less than 10s.
 
-# Finally, you may not use third party libraries to complete this challenge.  You
-# may only use the libraries available on a fresh Python 2.7 install.  I doubt
-# you will need to use any libraries at all as this is just an algorithmic
-# challenge.  BUT YOU MAY USE ANYTHING FROM THE BUILT IN PYTHON STANDARD LIBRARY 
-# (e.g. functools, itertools, math, string, etc).  It is actually
-# very impressive to see someone who is very comfortable with the 
-# entire python ecosystem.
+# Finally, you may not use third party libraries to complete this
+# challenge.  You may only use the libraries available on a fresh
+# Python 2.7 install.  I doubt you will need to use any libraries at
+# all as this is just an algorithmic challenge.  BUT YOU MAY USE
+# ANYTHING FROM THE BUILT IN PYTHON STANDARD LIBRARY (e.g. functools,
+# itertools, math, string, etc).  It is actually very impressive to
+# see someone who is very comfortable with the entire python
+# ecosystem.
