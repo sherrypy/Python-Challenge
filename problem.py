@@ -12,7 +12,7 @@
 # on the Idea Evolver Engineering Team requires.
 
 # CLARIFICATION 3:  I will run your solution with the 
-# following at the OS X command line
+# following at the OS X command line:
 # `time python problem.py < hard-test-case1000x1000.txt`
 # The symbol `<` that is the homophone of the mathematical "less than"
 # sign is called the redirect operator.  If you are not familiar with 
