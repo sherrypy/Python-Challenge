@@ -11,6 +11,15 @@
 # depth to ascertain that it is of the excellent quality a position 
 # on the Idea Evolver Engineering Team requires.
 
+# CLARIFICATION 3:  I will run your solution with the 
+# following at the OS X command line
+# `time python problem.py < hard-test-case1000x1000.txt`
+# The symbol `<` that is the homophone of the mathematical "less than"
+# sign is called the redirect operator.  If you are not familiar with 
+# the unix/linux/os x command line or the redirect operator,
+# this is something you need to google because we do not have
+# the time or resources to explain it here.
+
 # --------------------------------------
 
 # Problem Description:
@@ -75,15 +84,12 @@
 # run-tests.py is not part of your challenge.  It is simply a
 # convenience program that will test your code against all the test
 # cases (in the test-cases directory only, not the
-# hard-test-case*.txt's), one after another, and then tell you whether
+# hard-test-case1000x1000.txt), one after another, and then tell you whether
 # it passed or failed, and what the expected and actual outputs are.
 # You may review and modify run-tests.py as much as you want, but it
 # will not score or lose you any points
 
-# Included in the top level directory are four "hard" test cases that
-# are square grids of side lengths 10, 25, 50, 100, and 1000 cells.
-# These were randomly generated using generate-hard-test-case.py, and
-# they do not come with an expected output.  You may generate test
+# You may generate test
 # cases of various dimensions using generate-test-case.py, but the
 # ability of your algorithm to solve extra test cases you've created
 # will not be considered in our evaluation of this challenge.  THE
