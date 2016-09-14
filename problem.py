@@ -103,3 +103,58 @@
 # itertools, math, string, etc).  It is actually very impressive to
 # see someone who is very comfortable with the entire python
 # ecosystem.
+
+import sys
+
+
+class Solution:
+
+    def __init__(self, grid, m, n):
+        self.max_size = 0
+        self.m = m
+        self.n = n
+        self.dx = [-1, -1, -1, 0, 0, 1, 1, 1]
+        self.dy = [-1, 0, 1, -1, 1, -1, 0, 1]
+        self.grid = grid
+        self.solve_problem()
+
+    def solve_problem(self):
+        for i in xrange(self.m):
+            for j in xrange(self.n):
+                if self.grid[i][j] == 1:
+                    size = self.explore(i, j)
+                    self.max_size = max(self.max_size, size)
+
+    def explore(self, i, j):
+        stack = [(i, j)]
+        visited = set()
+        while stack:
+            point = stack.pop()
+            x = point[0]
+            y = point[1]
+            self.grid[x][y] = 0
+            visited.add(point)
+            for index in range(8):
+                row = x + self.dx[index]
+                col = y + self.dy[index]
+                if self.m > row >= 0 and self.n > col >= 0 and self.grid[row][col] == 1 and (row, col) not in visited:
+                    stack.append((row, col))
+        return len(visited)
+
+
+def get_input():
+    input_file = open(sys.argv[1]) if len(sys.argv) > 1 else sys.stdin
+    row = int(input_file.readline())
+    col = int(input_file.readline())
+    matrix = [[0 for _ in xrange(col)] for _ in xrange(row)]
+    for i in range(row):
+        line = input_file.readline()
+        j = 0
+        for item in line.split():
+            matrix[i][j] = int(item)
+            j += 1
+    return matrix, row, col
+
+if __name__ == '__main__':
+    input_grid, rows, cols = get_input()
+    print Solution(input_grid, rows, cols).max_size
