@@ -107,12 +107,12 @@
 import sys
 
 
-class Solution:
+class Solution(object):
 
-    def __init__(self, grid, m, n):
+    def __init__(self, grid, rows, cols):
         self.max_size = 0
-        self.m = m
-        self.n = n
+        self.m = rows
+        self.n = cols
         self.dx = [-1, -1, -1, 0, 0, 1, 1, 1]
         self.dy = [-1, 0, 1, -1, 1, -1, 0, 1]
         self.grid = grid
@@ -155,6 +155,10 @@ def get_input():
             j += 1
     return matrix, row, col
 
+
+def main():
+    input_grid, row_number, col_number = get_input()
+    print Solution(input_grid, row_number, col_number).max_size
+
 if __name__ == '__main__':
-    input_grid, rows, cols = get_input()
-    print Solution(input_grid, rows, cols).max_size
+    main()
