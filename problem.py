@@ -115,7 +115,7 @@ class Solution(object):
         rows: The number of rows in the matrix.
         cols: The number of columns in the matrix.
         max_size: The number of cells in the largest region.
-        dx, dy: The coordinates of 8 surrounding cells for current one.
+        dx, dy: The coordinates of 8 surroundings for current cell.
     """
 
     def __init__(self, grid, rows, cols):
@@ -126,19 +126,19 @@ class Solution(object):
         self.rows = rows
         self.cols = cols
         self.max_size = 0
-        self.dx = [-1, -1, -1, 0, 0, 1, 1, 1]
-        self.dy = [-1, 0, 1, -1, 1, -1, 0, 1]
-        self.solve_problem()
+        self._dx = [-1, -1, -1, 0, 0, 1, 1, 1]
+        self._dy = [-1, 0, 1, -1, 1, -1, 0, 1]
+        self.__solve_problem()
 
-    def solve_problem(self):
+    def __solve_problem(self):
         """Traverse the matrix grid to find the largest region."""
         for i in xrange(self.rows):
             for j in xrange(self.cols):
                 if self.grid[i][j] == 1:
-                    size = self.explore(i, j)
+                    size = self.__explore(i, j)
                     self.max_size = max(self.max_size, size)
 
-    def explore(self, i, j):
+    def __explore(self, i, j):
         """Performs DFS search iteratively by using a Stack."""
         stack = [(i, j)]
         visited = set()
@@ -146,12 +146,13 @@ class Solution(object):
             point = stack.pop()
             x = point[0]
             y = point[1]
-            self.grid[x][y] = 0
+            self.grid[x][y] = -1
             visited.add(point)
             for index in range(8):
-                row = x + self.dx[index]
-                col = y + self.dy[index]
-                if self.m > row >= 0 and self.n > col >= 0 and self.grid[row][col] == 1 and (row, col) not in visited:
+                row = x + self._dx[index]
+                col = y + self._dy[index]
+                if self.rows > row >= 0 and self.cols > col >= 0 \
+                        and self.grid[row][col] == 1 and (row, col) not in visited:
                     stack.append((row, col))
         return len(visited)
 
