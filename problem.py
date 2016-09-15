@@ -108,24 +108,38 @@ import sys
 
 
 class Solution(object):
+    """Solution of the largest region problem.
+
+    Attributes:
+        grid: The input matrix grid.
+        rows: The number of rows in the matrix.
+        cols: The number of columns in the matrix.
+        max_size: The number of cells in the largest region.
+        dx, dy: The coordinates of 8 surrounding cells for current one.
+    """
 
     def __init__(self, grid, rows, cols):
+        """Init Solution Class with the input matrix grid,
+        number of rows, and number of column.
+        Call solve_problem function to calculate the result."""
+        self.grid = grid
+        self.rows = rows
+        self.cols = cols
         self.max_size = 0
-        self.m = rows
-        self.n = cols
         self.dx = [-1, -1, -1, 0, 0, 1, 1, 1]
         self.dy = [-1, 0, 1, -1, 1, -1, 0, 1]
-        self.grid = grid
         self.solve_problem()
 
     def solve_problem(self):
-        for i in xrange(self.m):
-            for j in xrange(self.n):
+        """Traverse the matrix grid to find the largest region."""
+        for i in xrange(self.rows):
+            for j in xrange(self.cols):
                 if self.grid[i][j] == 1:
                     size = self.explore(i, j)
                     self.max_size = max(self.max_size, size)
 
     def explore(self, i, j):
+        """Performs DFS search iteratively by using a Stack."""
         stack = [(i, j)]
         visited = set()
         while stack:
@@ -143,6 +157,7 @@ class Solution(object):
 
 
 def get_input():
+    """Get input data from StdIn."""
     input_file = open(sys.argv[1]) if len(sys.argv) > 1 else sys.stdin
     row = int(input_file.readline())
     col = int(input_file.readline())
