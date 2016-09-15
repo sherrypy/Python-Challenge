@@ -126,8 +126,8 @@ class Solution(object):
         self.rows = rows
         self.cols = cols
         self.max_size = 0
-        self._dx = [-1, -1, -1, 0, 0, 1, 1, 1]
-        self._dy = [-1, 0, 1, -1, 1, -1, 0, 1]
+        self.__dx = [-1, -1, -1, 0, 0, 1, 1, 1]
+        self.__dy = [-1, 0, 1, -1, 1, -1, 0, 1]
         self.__solve_problem()
 
     def __solve_problem(self):
@@ -149,8 +149,8 @@ class Solution(object):
             self.grid[x][y] = -1
             visited.add(point)
             for index in range(8):
-                row = x + self._dx[index]
-                col = y + self._dy[index]
+                row = x + self.__dx[index]
+                col = y + self.__dy[index]
                 if self.rows > row >= 0 and self.cols > col >= 0 \
                         and self.grid[row][col] == 1 and (row, col) not in visited:
                     stack.append((row, col))
